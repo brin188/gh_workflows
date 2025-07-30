@@ -1,0 +1,12 @@
+name: mktplace_action
+
+on: push
+
+jobs:
+  code_check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout
+        uses: actions/checkout@v2
+      - name: syntax_check
+        uses: cclauss/Find-Python-syntax-errors-action@v0.2.0
